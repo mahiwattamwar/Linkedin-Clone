@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed | LinkedIn</title>
+    <link rel="icon" href="https://static.licdn.com/sc/h/akt4ae504epesldzj74dzred8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- fontfamily -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html">
+                <img src="img/logo.png" class="logo">
+            </a>
+            <div class="search-box">
+                <img src="./img/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="navbar-center">
+            <ul>
+                <li><a href="" class="active-link"><img src="img/home.png"><span>Home</span></a></li>
+                <li><a href=""><img src="img/network.png"><span>My Network</span></a></li>
+                <li><a href=""><img src="img/jobs.png"><span>Jobs</span></a></li>
+                <li><a href=""><img src="img/message.png"><span>Messaging</span></a></li>
+                <li><a href=""><img src="img/notification.png"><span>Notification</span></a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <div class="online">
+                <img src="https://media.licdn.com/dms/image/D4D35AQF-xOituFE0rw/profile-framedphoto-shrink_400_400/0/1685905494204?e=1692345600&v=beta&t=dwozdN228oHtrBxkK6Sar7xQMhDZf2HKRTSWybGwbuk"
+                    class="nav-profile-img" onclick="toggleMenu()">
+            </div>
+        </div>
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img
+                        src="https://media.licdn.com/dms/image/D4D35AQF-xOituFE0rw/profile-framedphoto-shrink_400_400/0/1685905494204?e=1692345600&v=beta&t=dwozdN228oHtrBxkK6Sar7xQMhDZf2HKRTSWybGwbuk">
+                    <div>
+                        <h3>Mahesh Wattamwar</h3>
+                        <a href="https://www.linkedin.com/in/maheshwattamwar/">See Your Proflie</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="" class="profile-menu-link">
+                    <img src="img/feedback.png">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+                <a href="" class="profile-menu-link">
+                    <img src="img/setting.png">
+                    <p>Settings and Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="" class="profile-menu-link">
+                    <img src="img/help.png">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="" class="profile-menu-link">
+                    <img src="img/display.png">
+                    <p>Display & Accesebility</p>
+                    <span>></span>
+                </a>
+                <a href="" class="profile-menu-link"
+                    target="_blank">
+                    <img src="img/logout.png">
+                    <p>Sign Out</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar ended -->
+    <!-- --popup -->
+    <div class="popup-container" id="popup">
+        <div class="header">
+            <img src="img/logo.png">
+            <h1>Welcome to LinkedIn</h1>
+        </div>
+        <div class="input-field">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname">
+        </div>
+        <div class="input-field">
+            <label for="userImg">User Image:</label>
+            <input type="file" id="userImgInput">
+        </div>
+        <div class="input-field">
+            <label for="descofuser">Description About User:</label>
+            <input type="text" id="descofuser">
+        </div>
+        <div class="input-field">
+            <label for="descofpost">Description Of Post:</label>
+            <input type="text" id="descofpost">
+        </div>
+        <div class="input-field">
+            <label for="imgofpost">Image used in Post:</label>
+            <input type="file" id="imgofpostInput">
+        </div>
+        <div class="buttons-container">
+            <button onclick="popup()">Discard</button>
+            <button onclick="add()">Post</button>
+        </div>
+    </div>
+    <!-- --popup ended-->
+    <div class="container">
+        <div class="left-sidebar">
+            <div class="sidebar-profile-box">
+                <img src="/banner.jpeg"
+                    width="100%" class="cover-img">
+                <div class="sidebar-profile-info">
+                    <img
+                        src="https://media.licdn.com/dms/image/D4D35AQF-xOituFE0rw/profile-framedphoto-shrink_400_400/0/1685905494204?e=1692345600&v=beta&t=dwozdN228oHtrBxkK6Sar7xQMhDZf2HKRTSWybGwbuk">
+                    <h1>Mahesh Wattamwar</h1>
+                    <h3>| SDE Intern @Source Code Technology |<br> 🧑‍💻Tech- Enthusiast 🧑‍💻 | Android Developer | Web
+                        Developer | ✅Open For Collaboration | 🧑‍🏫 Love to teach | 7.5 K+ @Linkedin Family 🚀|</h3>
+                    <ul>
+                        <li>Your Profile Views<span><b>500</b></span></li>
+                        <li>Your Post Views<span><b>10k</b></span></li>
+                        <li>Your Connections<span><b>8K</b></span></li>
+                    </ul>
+                </div>
+                <div class="sidebar-profile-link">
+                    <a href=""><img src="img/items.png">My Items</a>
+                    <a href=""><img src="img/premium.png">Try Premium</a>
+                </div>
+            </div>
+            <div class="sidebar-activity" id="sidebarActivity">
+                <h3><b>Recent</b></h3>
+                <a href=""><img src="img/recent.png">Web Development</a>
+                <a href=""><img src="img/recent.png">User Interface</a>
+                <a href=""><img src="img/recent.png">cfbr</a>
+                <a href=""><img src="img/recent.png">DevOps</a>
+                <a href=""><img src="img/recent.png">Code Better</a>
+                <a href=""><img src="img/recent.png">Group Learning</a>
+                <h3><b>Groups</b></h3>
+                <a href=""><img src="img/group.png">Guruji Consultancy Services</a>
+                <a href=""><img src="img/group.png">The Perfect Dev</a>
+                <a href=""><img src="img/group.png">Love Babbar</a>
+                <a href=""><img src="img/group.png">Web and App Development</a>
+                <h3><b>Followed Hashtags</b></h3>
+                <a href=""><img src="img/hashtag.png">webdevelopment</a>
+                <a href=""><img src="img/hashtag.png">letsconnect!</a>
+                <a href=""><img src="img/hashtag.png">lets Talk</a>
+                <div class="discover-more-link">
+                    <a href="">Discover More</a>
+                </div>
+            </div>
+            <p id="showMoreLink" onclick="showSideBar()">Show More <b>+</b></p>
+        </div>
+        <div class="main-content" id="main">
+            <div class="create-post">
+                <div class="create-post-input">
+                    <img
+                        src="https://media.licdn.com/dms/image/D4D35AQF-xOituFE0rw/profile-framedphoto-shrink_100_100/0/1685905494204?e=1692345600&v=beta&t=rporb6hlZI6CFKEv_fb6q0gAArroBLUbuz_hSMMKxNw">
+                    <textarea placeholder="Start a Post"></textarea>
+                </div>
+                <div class="create-post-links">
+                    <li><a href=""><img src="/icons8-photo-48.png">Photo</a></li>
+                    <li><a href=""><img src="/icons8-video-48.png">Video</a></li>
+                    <li><a href=""><img src="img/event.png">Job</a></li>
+                    <li>  <a href="" style="color: aliceblue;">Write articles</a></li>
+                    <!-- <li onclick="popup()">Job articles</li> -->
+                </div>
+            </div>
+            <div class="sort-by">
+                <hr>
+                <p>Sort By: <span>Top <img src="img/down-arrow.png" alt=""></span></p>
+            </div>
+            <!-- allposts -->
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/D4D35AQF-xOituFE0rw/profile-framedphoto-shrink_400_400/0/1685905494204?e=1692345600&v=beta&t=dwozdN228oHtrBxkK6Sar7xQMhDZf2HKRTSWybGwbuk">
+                    <div>
+                        <h1>Mahesh Wattamwar <span style="font-weight: lighter;">  (He/Him) &middot;You</span></h1>
+                        <small> SDE Intern @Source Code Technology | 🧑‍💻Tech- Enthusiast 🧑‍💻 | Android Developer | Web Developer |</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <p>👨‍💻🤔API VS SDK 👈👨‍💻<br>
+
+                    ✅ API stands for Application Programming Interface.<br>
+                    ✅ SDK stands for Software Development Kit.<br>
+                    
+                    👉 In simple terms, an API is a set of protocols, tools, and standards that allow different software applications to interact with each other.
+                    
+                    An API defines a set of rules for how different software components should communicate and interact with each other, providing a way for applications to access data and services from another application, without needing to know the underlying implementation details.<br>
+                    
+                    👉 In simple terms, an SDK is a collection of software development tools that developers use to create applications for a specific platform or programming language.
+                    An SDK usually includes libraries, APIs, documentation, and other tools that simplify the development process.<br>
+                    
+                    SDKs provide developers with the necessary building blocks and resources to create applications that can interact with APIs.
+                    </p>
+                <img src="https://i.ytimg.com/vi/NHVQiDDZ5TA/maxresdefault.jpg"
+                    width="100%">
+                <div class="post-stats">
+                    <div>
+                        <img src="img/thumbsup.png">
+                        <img src="img/love.png">
+                        <img src="img/clap.png">
+                        <span class="liked-users">yogesh Kshirsagar and 73 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="https://media.licdn.com/dms/image/D4D35AQF-xOituFE0rw/profile-framedphoto-shrink_400_400/0/1685905494204?e=1692388800&v=beta&t=p11k5O3iLB3-St0vt_7wE5CNU31zRIa_bLIEjRX_iKg"
+                            class="post-activity-user-icon">
+                        <img src="img/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <a href=""> <img src="img/like.png" class="post-activity-user-icon">
+                     <span>Like</span></a>  
+                    </div>
+                    <div class="post-activity-link">
+                        <a href="">
+                        <img src="img/comment.png" class="post-activity-user-icon">
+                        <span>Comment</span></a>
+                    </div>
+                    <div class="post-activity-link">
+                         <a href="">
+                        <img src="img/share.png" class="post-activity-user-icon">
+                        <span>Share</span></a>
+                    </div>
+                    <div class="post-activity-link">
+                        <a href="">
+                        <img src="img/send.png" class="post-activity-user-icon">
+                        <span>Send</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img
+                        src="https://media.licdn.com/dms/image/D4D35AQGYZLeKpvz0_Q/profile-framedphoto-shrink_400_400/0/1674663544344?e=1692388800&v=beta&t=fqLjbDA5-DHE7Runi8IZXL8NVnWuJ6ronqDYT7HzLPs">
+                    <div>
+                        <h1>Yogesh Kshirsagar &middot; <span style="font-weight: lighter;"></span></h1>
+                        <small>Student At College Of Engineering Pune</small>
+                        <small>5 days ago</small>
+                    </div>
+                </div>
+                <p>Join now🎯<br>
+                    #Robotaclassroom</p>
+                <!-- <video
+                    poster="https://media.licdn.com/dms/image/D4D05AQGujfNmeHKdww/videocover-high/0/1684965468004?e=1685883600&amp;v=beta&amp;t=AcimwqG_x6wwbpK3-4u7HP3UtoeMDvWSfEv_4now6dw"
+                    src="https://dms.licdn.com/playlist/vid/D4D05AQGujfNmeHKdww/mp4-720p-30fp-crf28/0/1684965490953?e=1685883600&amp;v=beta&amp;t=oAo4Jc_HWXK1NWozHCE9nBF3IgYOi70jc7UGxmaIPGs"
+                    autoplay="autoplay" width="100%" controls></video> -->
+               
+               
+                    <div class="post-stats">
+                    <div>
+                        <img src="img/thumbsup.png">
+                        <img src="img/love.png">
+                        <img src="img/clap.png">
+                        <span class="liked-users">you and 12 others</span>
+                    </div>
+                    <div>
+                        <span>22 comments &middot; 24 shares</span>
+                    </div>
+                </div>
+                <div class="post-activity">
+                    <div>
+                        <img src="https://media.licdn.com/dms/image/D4D35AQF-xOituFE0rw/profile-framedphoto-shrink_400_400/0/1685905494204?e=1692388800&v=beta&t=p11k5O3iLB3-St0vt_7wE5CNU31zRIa_bLIEjRX_iKg"
+                            class="post-activity-user-icon">
+                        <img src="img/down-arrow.png" class="post-activity-arrow-icon">
+                    </div>
+                    <div class="post-activity-link">
+                        <a href="">
+                        <img src="img/like.png" class="post-activity-user-icon">
+                        <span>Like</span></a>
+                    </div>
+                    <div class="post-activity-link">
+                        <a href="">
+                        <img src="img/comment.png" class="post-activity-user-icon">
+                        <span>Comment</span></a>
+                    </div>
+                    <div class="post-activity-link">
+                        <a href="">
+                        <img src="img/share.png" class="post-activity-user-icon">
+                        <span>Share</span></a>
+                    </div>
+                    <div class="post-activity-link">
+                        <a href="">
+                        <img src="img/send.png" class="post-activity-user-icon">
+                        <span>Send</span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="right-sidebar">
+            <div class="sidebar-news">
+                <img src="img/more.png" class="info-icon">
+                <h3>Linkedin News</h3>
+                <a href="">Demat account openings surge</a>
+                <span>1d ago &middot; 1934 readers</span>
+                <a href="">Carrier growing horizontally too</a>
+                <span>10d ago &middot; 1084 readers</span>
+                <a href="">Less work visa for US, more for UK</a>
+                <span>7h ago &middot; 7980 readers</span>
+                <a href="">More hiring = Higher confidence ?</a>
+                <span>1h ago &middot; 1924 readers</span>
+                <a href="">GCS has announced batch 4 of full stack development</a>
+                <span>8h ago &middot; 1906 readers</span>
+                <a href="" class="read-more-link">Read More</a>
+            </div>
+            <div class="sidebar-ad">
+                <small>AD &middot; &middot; &middot;</small>
+                <p>Master the 5 principles of web design</p>
+                <div>
+                    <img src="https://mahiwattamwar.github.io/gcs/img/gcs.png"
+                        alt="">
+
+                </div>
+                <i>Share Your Experience With <br> <b>Guruji Consultancy Services</b> </i>
+                <a href="https://mahiwattamwar.github.io/gcs/" class="ad-link"
+                    target="_blank">Learn More</a>
+            </div>
+            <div class="sidebar-useful-links">
+                <a href="">About</a>
+                <a href="">Accesibility</a>
+                <a href="">Help Center</a>
+                <a href="">Privacy & Terms</a>
+                <a href="">Ad Choices</a>
+                <a href="">Advertising</a>
+                <a href="">Business Services</a>
+                <a href="">Get the Linkedin App</a>
+                <a href="">More</a>
+                <div class="copyright-msg">
+                    <img src="img/logo.png">
+                    <p>Mahesh &copy; All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
